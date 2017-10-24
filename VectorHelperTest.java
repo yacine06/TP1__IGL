@@ -48,7 +48,7 @@ public class VectorHelperTest {
         v.add((double) 12);
         v.add((double) 21);
         /**
-         * l'addition
+         *test de l'addition
          * */
         R.VecForm(v, "+",2);
         assertTrue("ya une erreur dans la fonction VecForm addition", v.get(0) == 842);
@@ -56,7 +56,7 @@ public class VectorHelperTest {
         assertTrue("ya une erreur dans la fonction VecForm addition", v.get(2) == 14);
         assertTrue("ya une erreur dans la fonction VecForm addition", v.get(3) == 23);
         /**
-         * la soustraction
+         *test de  la soustraction
          * */
         R.VecForm(v, "-",2);
         assertTrue("ya une erreur dans la fonction VecForm soustraction", v.get(0) == 840);
@@ -64,7 +64,7 @@ public class VectorHelperTest {
         assertTrue("ya une erreur dans la fonction VecForm soustraction", v.get(2) == 12);
         assertTrue("ya une erreur dans la fonction VecForm soustraction", v.get(3) == 21);
         /**
-         * la multiplication
+         * test de la multiplication
          */
         R.VecForm(v, "*",2);
         assertTrue("ya une erreur dans la fonction VecForm miltiplication", v.get(0) == 1680);
@@ -72,7 +72,7 @@ public class VectorHelperTest {
         assertTrue("ya une erreur dans la fonction VecForm multiplication", v.get(2) == 24);
         assertTrue("ya une erreur dans la fonction VecForm miltiplication", v.get(3) == 42);
         /**
-         *la division
+         *test de la division
          * */
         R.VecForm(v, "/",2);
         assertTrue("ya une erreur dans la fonction VecForm miltiplication", v.get(0) == 840);
