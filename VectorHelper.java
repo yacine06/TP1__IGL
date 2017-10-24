@@ -8,7 +8,9 @@ import java.util.ArrayList;
  * Created by Yacine on 10/18/2017.
  */
 public class VectorHelper {
-    
+
+    private ArrayList<Double> vecteur = new ArrayList<Double>();
+
     /**
      * un constreucteur par defaut de la class VectorHelper*/
     public void VectorHelper() {
@@ -50,7 +52,6 @@ public class VectorHelper {
      * @param f la formule a appliquer
      * @param n les donnees de la formule
      *@return
-
     le fonction return le meme vecteur donner en entrer on appliquns la formule donner en entrer a touts les elements de vecteur*/
     public  ArrayList<Double> VecForm(ArrayList<Double> vec, String f,int n){
         /**une fonction qui permet dappliquer une formule a toutes les elements de Vecteur*/
@@ -87,16 +88,13 @@ public class VectorHelper {
         return vec;
     }
 
-}
-
-   
 
     /**
      *
-     * @param V1 : c'est un vecteur de type arraylist initialiser avec des valeurs de type Double donné en entré de la fonction
-     * @param V2 : c'est un vecteur de type arraylist initialiser avec des valeurs de type Double donné en entré de la fonction
-     * @return  : une instance de ArrayList :correspont à un vecteur qui est le resultat de la somme des deux vecteurs donnés en entré
-     * @throws Tail_DiffException      : Si jamais les deux vecteurs à sommer sont de taille différentes
+     * @param V1 : c'est un vecteur de type arraylist initialiser avec des valeurs de type Double donner en entrer de la fonction
+     * @param V2 : c'est un vecteur de type arraylist initialiser avec des valeurs de type Double donner en entrer de la fonction
+     * @return  : une instance de ArrayList :correspont a un vecteur qui est le resultat de la somme des deux vecteurs donnes en entre
+     * @throws Tail_DiffException      : Si jamais les deux vecteurs a sommer sont de taille differentes
      */
 
     public ArrayList<Double> Sommer_deux_vecteur(ArrayList<Double> V1 , ArrayList<Double> V2)throws Tail_DiffException
@@ -114,9 +112,9 @@ public class VectorHelper {
             /**
              *  Sinon (la taille est la meme) on traite le 'else' et on fait la somme
              */
-            int i ;
 
-            for( i = 0 ; i < V1.size(); i++) {
+
+            for(int i = 0 ; i < V1.size(); i++) {
                 this.vecteur.add( V1.get(i) + V2.get(i)) ;
             }
 
@@ -128,9 +126,9 @@ public class VectorHelper {
 
     /**
      *
-     * @param v :  c'est un vecteur de type ArrayList inisialisé avec des valeurs Double
-     * @return  : une instance de ArrayList, correspont à un vecteur qui contient les valeurs
-     *              de vecteur donné on entré mais qui seront inversés
+     * @param v :  c'est un vecteur de type ArrayList inisialis avec des valeurs Double
+     * @return  : une instance de ArrayList, correspont a un vecteur qui contient les valeurs
+     *              de vecteur donner on entrer mais qui seront inverses
      */
 
     public ArrayList<Double>  Inverser_Vector(ArrayList<Double>  v)
@@ -138,9 +136,9 @@ public class VectorHelper {
         int i ;			int j = v.size();
 
         /**
-         *  le vecteur de retour aura la meme taille avec le vecteur d'entré V
-         * on parcour le vecteur V de la première case à la taille maximal et a chaque fois on affect la valeur lu
-         * à une case de vecteur de retour mais en commençant par la taille maximal vers la premitère case
+         *  le vecteur de retour aura la meme taille avec le vecteur d'entre V
+         * on parcour le vecteur V de la premiere case a la taille maximal et a chaque fois on affect la valeur lu
+         * a une case de vecteur de retour mais en commençant par la taille maximal vers la premitere case
          */
 
 
@@ -155,33 +153,32 @@ public class VectorHelper {
 
     /**
      *
-     * @param v : c'est un vecteur de type ArrayList inisialisé avec des valeurs Doubles
+     * @param v : c'est un vecteur de type ArrayList inisialise avec des valeurs Doubles
      */
 
     public Double [] Max_et_Min(ArrayList<Double> v){
 
-        int i ;
 
         /**
-         * on crre un vecteur de deux valeurs on met la première case pour le min et la 2éme pour le max
+         * on crre un vecteur de deux valeurs on met la premiere case pour le min et la 2eme pour le max
          */
 
         Double [] res  = new Double[2];
 
         /**
-         * on inisialise le min à la première valeurs du vecteur V
-         * on inisialise le max à la première valeurs du vecteur V
+         * on inisialise le min a la premiere valeurs du vecteur V
+         * on inisialise le max a la premiere valeurs du vecteur V
          */
         res[0] = v.get(0);
         res[1] = v.get(0);
 
 
         /**
-         * on parcourt le vecteur V puis à chaque fois qand trouve une valeur inféreure au min( res[0] )
-         * on écrase ce dérnier avec cette valeur ; meme chose pour le max (res[1] )
+         * on parcourt le vecteur V puis a chaque fois qand trouve une valeur inferieure au min( res[0] )
+         * on ecrase ce dernier avec cette valeur ; meme chose pour le max (res[1] )
          */
 
-        for (i = 1 ; i < v.size() ; i++){
+        for (int i = 1 ; i < v.size() ; i++){
 
             if ( res[1] < v.get(i) )	{		res[1] = v.get(i) ; 		}
             if ( res[0] > v.get(i) )  { 		res[0] = v.get(i) ; 		}
@@ -189,13 +186,13 @@ public class VectorHelper {
 
 
         /**
-         * retourne les resultat trouver c'est à dire la valeur min et max sous forme d un vecteur
+         * retourne les resultat trouver c'est a dire la valeur min et max sous forme d un vecteur
          */
 
         return (res);
     }
-   
-   
+
+
 
 
 }
