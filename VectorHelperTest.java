@@ -3,8 +3,14 @@ import java.util.ArrayList;
 import static org.junit.Assert.*;
 
 /**
- * Created by Yacine on 10/23/2017.
- * une class principale pour les tests unitaires
+ * @author yacine morakeb
+ * /** *********TP N_01 IGL Application 2 VectorHelper *******************
+ * Morakeb Yacine -- Aboud Souad
+ * Groupe 10 
+ * Email: fy_morakeb@esi.dz / fs_aboud@esi.dz
+ * @version 3.0
+ * Created by Yacine && souad on 10/18/2017.
+ * une class principale pour les tests unitaires qu'on utilise pour assurer la validité des fonctions  
  */
 public class VectorHelperTest {
     @org.junit.Test
@@ -47,8 +53,9 @@ public class VectorHelperTest {
         v.add((double) 33);
         v.add((double) 12);
         v.add((double) 21);
+
         /**
-         *test de l'addition
+         * l'addition
          * */
         R.VecForm(v, "+",2);
         assertTrue("ya une erreur dans la fonction VecForm addition", v.get(0) == 842);
@@ -56,7 +63,7 @@ public class VectorHelperTest {
         assertTrue("ya une erreur dans la fonction VecForm addition", v.get(2) == 14);
         assertTrue("ya une erreur dans la fonction VecForm addition", v.get(3) == 23);
         /**
-         *test de  la soustraction
+         * la soustraction
          * */
         R.VecForm(v, "-",2);
         assertTrue("ya une erreur dans la fonction VecForm soustraction", v.get(0) == 840);
@@ -64,7 +71,7 @@ public class VectorHelperTest {
         assertTrue("ya une erreur dans la fonction VecForm soustraction", v.get(2) == 12);
         assertTrue("ya une erreur dans la fonction VecForm soustraction", v.get(3) == 21);
         /**
-         * test de la multiplication
+         * la multiplication
          */
         R.VecForm(v, "*",2);
         assertTrue("ya une erreur dans la fonction VecForm miltiplication", v.get(0) == 1680);
@@ -72,7 +79,7 @@ public class VectorHelperTest {
         assertTrue("ya une erreur dans la fonction VecForm multiplication", v.get(2) == 24);
         assertTrue("ya une erreur dans la fonction VecForm miltiplication", v.get(3) == 42);
         /**
-         *test de la division
+         *la division
          * */
         R.VecForm(v, "/",2);
         assertTrue("ya une erreur dans la fonction VecForm miltiplication", v.get(0) == 840);
