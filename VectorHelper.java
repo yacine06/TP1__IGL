@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-/**@author yacine
+/**@author yacine and souad
 *@version 3.0
  * Created by Yacine on 10/18/2017.
  */
@@ -87,21 +87,31 @@ public class VectorHelper {
         return vec;
     }
 
-    
    
 
-    /////**************************************   Somme 2 vecteurs 	*********************************///////
-
+    /**
+     *
+     * @param V1 : c'est un vecteur de type arraylist initialiser avec des valeurs de type Double donné en entré de la fonction
+     * @param V2 : c'est un vecteur de type arraylist initialiser avec des valeurs de type Double donné en entré de la fonction
+     * @return  : une instance de ArrayList :correspont à un vecteur qui est le resultat de la somme des deux vecteurs donnés en entré
+     * @throws Tail_DiffException      : Si jamais les deux vecteurs à sommer sont de taille différentes
+     */
 
     public ArrayList<Double> Sommer_deux_vecteur(ArrayList<Double> V1 , ArrayList<Double> V2)throws Tail_DiffException
     {
-
+        /**
+         * on test la taille des deux vecteurs
+         * si elle est différente on rentrera dans le 'IF', une exception sera lancer et la somme ne s'effectuera pas
+         */
         if (V1.size() != V2.size())
         {
             throw new Tail_DiffException();
         }
         else{
 
+            /**
+             *  Sinon (la taille est la meme) on traite le 'else' et on fait la somme
+             */
             int i ;
 
             for( i = 0 ; i < V1.size(); i++) {
@@ -114,13 +124,22 @@ public class VectorHelper {
     }
 
 
-
-    /////**********************************	  Inverser elements d un vecteur   ************************///////
+    /**
+     *
+     * @param v :  c'est un vecteur de type ArrayList inisialisé avec des valeurs Double
+     * @return  : une instance de ArrayList, correspont à un vecteur qui contient les valeurs
+     *              de vecteur donné on entré mais qui seront inversés
+     */
 
     public ArrayList<Double>  Inverser_Vector(ArrayList<Double>  v)
     {
         int i ;			int j = v.size();
 
+        /**
+         *  le vecteur de retour aura la meme taille avec le vecteur d'entré V
+         * on parcour le vecteur V de la première case à la taille maximal et a chaque fois on affect la valeur lu
+         * à une case de vecteur de retour mais en commençant par la taille maximal vers la premitère case
+         */
 
 
         for(i = 0 ; i < v.size() ; i++)
@@ -132,15 +151,26 @@ public class VectorHelper {
         return vecteur;
     }
 
-
-    /////********************************		Min et Max d un vecteur 	*****************************///////
+    /**
+     *
+     * @param v : c'est un vecteur de type ArrayList inisialisé avec des valeurs Doubles
+     */
 
     public void Max_et_Min(ArrayList<Double> v){
 
         int i ;
-
+        /**
+         * on inisialise le min à la première valeurs du vecteur V
+         * on inisialise le max à la première valeurs du vecteur V
+         */
         this.Max = v.get(0);
         this.Min = v.get(0);
+
+
+        /**
+         * on parcourt le vecteur V puis à chaque fois qand trouve une valeur inféreure au min
+         * on écrase ce dérnier avec cette valeur ; meme chose pour le max
+         */
 
         for (i = 1 ; i < v.size() ; i++){
 
@@ -148,26 +178,18 @@ public class VectorHelper {
             if ( this.Min > v.get(i) )  { 		this.Min = v.get(i) ; 		}
         }
 
+
+        /**
+         * on affiche les resultat trouver c'est à dire la valeur min et max
+         */
         System.out.println("le maximum de ce vecteur est  :    "+this.Max);
         System.out.println("le minimum de ce vecteur est  :    "+this.Min);
 
 
     }
 
-
-
-    /////********************************		Afficher un vecteur 	*****************************///////
-
-    public void AffichVector(){
-        int i ;
-
-        for(i = 0 ; i < this.vecteur.size() ; i++)
-        {
-            System.out.println("T["+i+"] = "+this.vecteur.get(i));
-        }
-
-    }
-
+   
+   
 
 
 }
