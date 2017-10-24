@@ -5,7 +5,8 @@ import java.util.ArrayList;
  */
 public class VectorHelper {
    
-    
+    private ArrayList<Double> vecteur = new ArrayList<Double>(); 
+   
     /**
      * un constreucteur par defaut de la class VectorHelper*/
     public void VectorHelper() {
