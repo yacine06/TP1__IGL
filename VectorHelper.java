@@ -5,10 +5,6 @@ import java.util.ArrayList;
  */
 public class VectorHelper {
    
-     private ArrayList<Double> vecteur = new ArrayList<Double>();
-    private Double Max;
-    private Double Min;
-    
     
     /**
      * un constreucteur par defaut de la class VectorHelper*/
@@ -156,38 +152,42 @@ public class VectorHelper {
      * @param v : c'est un vecteur de type ArrayList inisialisé avec des valeurs Doubles
      */
 
-    public void Max_et_Min(ArrayList<Double> v){
+    public Double [] Max_et_Min(ArrayList<Double> v){
 
         int i ;
+
+        /**
+         * on crre un vecteur de deux valeurs on met la première case pour le min et la 2éme pour le max
+         */
+
+        Double [] res  = new Double[2];
+
         /**
          * on inisialise le min à la première valeurs du vecteur V
          * on inisialise le max à la première valeurs du vecteur V
          */
-        this.Max = v.get(0);
-        this.Min = v.get(0);
+        res[0] = v.get(0);
+        res[1] = v.get(0);
 
 
         /**
-         * on parcourt le vecteur V puis à chaque fois qand trouve une valeur inféreure au min
-         * on écrase ce dérnier avec cette valeur ; meme chose pour le max
+         * on parcourt le vecteur V puis à chaque fois qand trouve une valeur inféreure au min( res[0] )
+         * on écrase ce dérnier avec cette valeur ; meme chose pour le max (res[1] )
          */
 
         for (i = 1 ; i < v.size() ; i++){
 
-            if ( this.Max < v.get(i) )	{		this.Max = v.get(i) ; 		}
-            if ( this.Min > v.get(i) )  { 		this.Min = v.get(i) ; 		}
+            if ( res[1] < v.get(i) )	{		res[1] = v.get(i) ; 		}
+            if ( res[0] > v.get(i) )  { 		res[0] = v.get(i) ; 		}
         }
 
 
         /**
-         * on affiche les resultat trouver c'est à dire la valeur min et max
+         * retourne les resultat trouver c'est à dire la valeur min et max sous forme d un vecteur
          */
-        System.out.println("le maximum de ce vecteur est  :    "+this.Max);
-        System.out.println("le minimum de ce vecteur est  :    "+this.Min);
 
-
+        return (res);
     }
-
    
    
 
