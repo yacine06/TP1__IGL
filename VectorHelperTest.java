@@ -6,11 +6,11 @@ import static org.junit.Assert.*;
  * @author yacine morakeb
  * /** *********TP N_01 IGL Application 2 VectorHelper *******************
  * Morakeb Yacine -- Aboud Souad
- * Groupe 10 
+ * Groupe 10
  * Email: fy_morakeb@esi.dz / fs_aboud@esi.dz
  * @version 3.0
- * Created by Yacine && souad on 10/18/2017.
- * une class principale pour les tests unitaires qu'on utilise pour assurer la validité des fonctions  
+ * Created by Yacine on 10/18/2017.
+ * une class principale pour les tests unitaires qu'on utilise pour assurer la validité des fonctions
  */
 public class VectorHelperTest {
     @org.junit.Test
@@ -18,8 +18,14 @@ public class VectorHelperTest {
 
     }
 
+    /**
+     *  test méthode sortVec()
+     * @throws Exception une exception ce génere automatiquement on ca d'erreur
+     */
+
     @org.junit.Test
     public void sortVec() throws Exception {
+
         VectorHelper  R = new VectorHelper();
         ArrayList<Double> v =new ArrayList<Double>();
         v.add((double) 750);
@@ -30,7 +36,7 @@ public class VectorHelperTest {
          *if(v.get(0)!=29){
          *fail("erreur ya un bugue ");
          *}
-         * touts ces instructions sont équivalant a la ligne de code qui suit
+         * touts ces instructions sont equivalant a la ligne de code qui suit
 
           */
         assertTrue("ya une erreur dans la fonction sortVec", v.get(2) == 750);
@@ -38,12 +44,15 @@ public class VectorHelperTest {
          *if(v.get(2)!=750){
          *fail("erreur ya un bugue ");
          *}
-         * touts ces instructions sont équivalant a la ligne de code qui suit
+         * touts ces instructions sont equivalant a la ligne de code qui suit
 
          */
         assertTrue("ya une erreur dans la fonction sortVec", v.get(2) == 750);
 
     }
+/**
+ * test methode vecForm();
+ */
 
     @org.junit.Test
     public void vecForm() throws Exception {
@@ -90,6 +99,7 @@ public class VectorHelperTest {
 
     }
 
+}
     
      @org.junit.Test
     public void sommer_deux_vecteur() throws Exception {
