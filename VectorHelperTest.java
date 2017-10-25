@@ -99,7 +99,6 @@ public class VectorHelperTest {
 
     }
 
-}
     
      @org.junit.Test
     public void sommer_deux_vecteur() throws Exception {
