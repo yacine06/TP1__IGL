@@ -59,7 +59,8 @@ public class Main {
                 R1.add(val);
             }
 
-            System.out.println("Si vous disirer avoir l'inverse du vecteur choisisez '1' , et pour avoir le max et le min  choisisez'2' ");
+            System.out.println("Si vous disirer avoir l'inverse du vecteur choisisez '1' ," +
+                    " et pour avoir le max et le min  choisisez'2' , et pour trier le vecteur choisisez 3 , ou bien le 4 pour appliquer une fonction a ce vecteur ");
             Scanner m = new Scanner(System.in);
             System.out.print("Saisisez votre choix  :   ");
             int reponse2 = m.nextInt();
@@ -69,11 +70,27 @@ public class Main {
                 RES = V.Inverser_Vector(R1);
                 AffichVector(RES);
             }
-            else{
+            if(reponse2 == 2 ){
                 Double [] res = new Double[2];
                 res = V.Max_et_Min(R1);
                 System.out.println("Min : "+res[0]);
                 System.out.println("Max : "+res[1]);
+            }
+            if(reponse2 == 3){
+                V.SortVec(R1);
+                AffichVector(R1);
+            }
+            if(reponse2 == 4){
+                System.out.print("Saisisez la fonction que vous voulez appliquer   :   ");
+                Scanner ch = new Scanner(System.in);
+                String chn = ch.nextLine();
+
+                System.out.print("Saisisez l'entier a uliser   :   ");
+                Scanner h = new Scanner(System.in);
+                int n3 = h.nextInt();
+
+                V.VecForm(R1,chn,n3);
+                AffichVector(R1);
             }
         }
     }
